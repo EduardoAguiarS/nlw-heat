@@ -19,6 +19,10 @@ body {
   /* Colors */
   --gray: #e1e1e6;
   --black: #202024;
+
+  /* Font Size */
+  --title: 1.5rem;
+  --paragraph: 0.875rem;
 }
 
 body {
@@ -47,6 +51,7 @@ main {
   position: relative;
 }
 
+/* Stamp */
 .avatar span {
   position: absolute;
   top: -15px;
@@ -61,10 +66,33 @@ main {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
+/* Your name */
 h1 {
-  font-size: 1.5rem;
+  font-size: var(--title);
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 }
 
+/* Github */
 a {
   color: var(--gray);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Description */
+p {
+  margin-top: 2rem;
+  font-size: var(--paragraph);
+}
+
+/* Social list */
+ul {
+  margin-top: 4rem;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
 }
