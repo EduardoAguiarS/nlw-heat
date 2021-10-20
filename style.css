@@ -6,8 +6,15 @@ body {
 body {
   display: grid;
   place-items: center;
+}
 
-  background: lightblue;
+main {
+  background: url(/images/bg.png) no-repeat;
+  width: 375px;
+  height: 812px;
+}
+
+.container {
 }
 
 h1 {
