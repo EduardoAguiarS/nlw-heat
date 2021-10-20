@@ -1,3 +1,4 @@
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +7,18 @@
   text-decoration: none;
 }
 
+/* General and Body Styles */
 html,
 body {
   height: 100%;
+
+  /* Font Styles */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
+
+  /* Colors */
+  --gray: #e1e1e6;
+  --black: #202024;
 }
 
 body {
@@ -21,6 +29,7 @@ body {
 main {
   background: url(/images/bg.png) no-repeat;
   width: 375px;
+  color: var(--gray);
   height: 812px;
 }
 
@@ -35,5 +44,5 @@ h1 {
 }
 
 a {
-  color: black;
+  color: var(--gray);
 }
