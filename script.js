@@ -2,8 +2,8 @@
 const linksSocialMedia = {
   youtube: "UCmNxFPYFJxUVZNsfVg-SRVg",
   instagram: "oeduardoaguiar",
-  facebook: "maykbrito",
-  twitter: "maykbrito",
+  facebook: "",
+  twitter: "",
   github: "eduardoaguiars"
 };
 
