@@ -10,6 +10,7 @@
 /* General and Body Styles */
 html,
 body {
+  height: 100%;
   /* Font Styles */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,8 +56,6 @@ main {
 }
 
 /* Reponsive Mobile */
-@media only screen and (min-width: 320px) and (max-width: 424px) {
-}
 
 /* Stamp */
 .avatar span {
@@ -93,6 +92,7 @@ a {
 p {
   margin-top: 2rem;
   font-size: var(--paragraph);
+  line-height: 1.2rem;
 }
 
 /* Social list */
@@ -102,4 +102,19 @@ ul {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: url("./images/Desktop.png") no-repeat center/cover;
+  }
+
+  main {
+    width: 360px;
+    min-height: 540px;
+    height: auto;
+  }
+  .avatar {
+    margin: 3.3rem auto 0;
+  }
 }
