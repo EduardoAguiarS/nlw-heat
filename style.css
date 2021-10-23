@@ -52,7 +52,7 @@ main {
 
 /* Avatar and Stamp Style */
 .avatar {
-  width: 10rem;
+  /* width: 10rem; */
   margin: auto auto 1rem;
   position: relative;
 }
@@ -60,7 +60,7 @@ main {
 /* Reponsive Mobile */
 @media only screen and (min-width: 320px) and (max-width: 424px) {
   .avatar {
-    margin: auto auto 2.5rem;
+    /* margin: auto auto 2.5rem; */
   }
 }
 
