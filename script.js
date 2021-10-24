@@ -1,58 +1,59 @@
-// Object social media users name
-const linksSocialMedia = {
-  youtube: "UCmNxFPYFJxUVZNsfVg-SRVg",
-  instagram: "oeduardoaguiar",
-  facebook: "",
-  twitter: "",
-  github: "eduardoaguiars"
-};
+const modal = document.querySelector("#modal");
+const createBtn = document.querySelector("#create");
 
-// Change social media links
-function changeSocialMediaLinks() {
-  for (let li of socialLinks.children) {
-    const social = li.getAttribute("class");
+createBtn.addEventListener("click", event => {
+  event.preventDefault();
+  // Object social media users name
+  const linksSocialMedia = {
+    youtube: `${youtube.value}`,
+    instagram: `${instagram.value}`,
+    facebook: `${facebook.value}`,
+    twitter: `${twitter.value}`,
+    github: `${github.value}`
+  };
 
-    if (social === "youtube") {
-      li.children[0].href = `https://${social}.com/channel/${linksSocialMedia[social]}`;
-    } else {
-      li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`;
+  // Change social media links
+  function changeSocialMediaLinks() {
+    for (let li of socialLinks.children) {
+      const social = li.getAttribute("class");
+      li.children[0].href = `https://${social}.com/${linksSocialMedi[social]}`;
     }
   }
-}
 
-changeSocialMediaLinks();
+  changeSocialMediaLinks();
 
-// Get github profiles infos
-function getGitHubUserInfos() {
-  const url = `https://api.github.com/users/${linksSocialMedia.github}`;
+  // Get github profiles infos
+  function getGitHubUserInfos() {
+    const url = `https://api.github.com/users/${linksSocialMedia.github}`;
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      userName.textContent = data.name;
-      userBio.textContent = data.bio;
-      userLink.href = data.html_url;
-      userAvatar.src = data.avatar_url;
-      userLogin.textContent = data.login;
-    });
-}
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        userName.textContent = data.name;
+        userBio.textContent = data.bio;
+        userLink.href = data.html_url;
+        userAvatar.src = data.avatar_url;
+        userLogin.textContent = data.login;
+      });
+  }
 
-getGitHubUserInfos();
+  getGitHubUserInfos();
+  modal.classList.remove("active");
+});
 
-// Open Modal
-function Modal() {
-  const modal = document.querySelector("#modal");
+//Modal OpenClose
+function openCloseModal() {
   const modalOpenBtn = document.querySelector("#openModalBtn");
-  // Abrir a Modal
+  // Open Modal
   modalOpenBtn.addEventListener("click", event => {
     event.preventDefault();
     modal.classList.add("active");
   });
-  // Fechar a Modal
+  // Close Modal
   const cancelar = document.querySelector("#cancelar");
   cancelar.addEventListener("click", event => {
     event.preventDefault();
     modal.classList.remove("active");
   });
 }
-Modal();
+openCloseModal();
