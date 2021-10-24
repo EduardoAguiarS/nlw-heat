@@ -176,12 +176,6 @@ ul {
   color: var(--gray);
   padding: 3rem 2rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.534);
-  transform: translateX(-100rem);
-  transition: 0.5s ease;
-}
-
-.modal.active .modal-wrapper {
-  transform: translateX(0);
 }
 
 .modal-header {

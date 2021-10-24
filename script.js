@@ -43,8 +43,16 @@ getGitHubUserInfos();
 function Modal() {
   const modal = document.querySelector("#modal");
   const modalOpenBtn = document.querySelector("#openModalBtn");
-  modalOpenBtn.addEventListener("click", () => {
+  // Abrir a Modal
+  modalOpenBtn.addEventListener("click", event => {
+    event.preventDefault();
     modal.classList.add("active");
+  });
+  // Fechar a Modal
+  const cancelar = document.querySelector("#cancelar");
+  cancelar.addEventListener("click", event => {
+    event.preventDefault();
+    modal.classList.remove("active");
   });
 }
 Modal();
