@@ -38,3 +38,13 @@ function getGitHubUserInfos() {
 }
 
 getGitHubUserInfos();
+
+// Open Modal
+function Modal() {
+  const modal = document.querySelector("#modal");
+  const modalOpenBtn = document.querySelector("#openModalBtn");
+  modalOpenBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+}
+Modal();
