@@ -235,3 +235,19 @@ ul {
 .button:nth-child(2) {
   background: #ff008e;
 }
+
+/* Modal Desktop */
+@media only screen and (min-width: 768px) {
+  .modal-wrapper {
+    width: 600px;
+    padding: 3rem 4rem;
+  }
+
+  .modal form input {
+    font-size: 1rem;
+  }
+
+  .modal form span {
+    font-size: 0.9rem;
+  }
+}
