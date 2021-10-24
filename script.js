@@ -59,6 +59,11 @@ function openCloseModal() {
   const cancelar = document.querySelector("#cancelar");
   cancelar.addEventListener("click", event => {
     event.preventDefault();
+    github.value = "";
+    facebook.value = "";
+    instagram.value = "";
+    youtube.value = "";
+    twitter.value = "";
     modal.classList.remove("active");
   });
 }
