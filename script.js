@@ -38,6 +38,12 @@ createBtn.addEventListener("click", event => {
   }
 
   getGitHubUserInfos();
+
+  github.value = "";
+  facebook.value = "";
+  instagram.value = "";
+  youtube.value = "";
+  twitter.value = "";
   modal.classList.remove("active");
 });
 

@@ -97,7 +97,7 @@ p {
 
 /* Social list */
 ul {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   display: flex;
   gap: 0.5rem;
@@ -129,8 +129,8 @@ ul {
   main {
     display: block;
     width: 360px;
-    min-height: 540px;
-    height: 540px;
+    min-height: 580px;
+    height: 580px;
     margin-top: 150px;
   }
 
@@ -274,5 +274,5 @@ ul {
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 }
