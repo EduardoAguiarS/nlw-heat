@@ -104,7 +104,7 @@ ul {
 }
 
 .top-detail {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1;
   display: none;
@@ -140,4 +140,47 @@ ul {
   .top-detail {
     display: flex;
   }
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+
+  background: hsla(0, 0%, 3%, 0.342);
+
+  backdrop-filter: blur(2px);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.modal-wrapper {
+  width: 300px;
+  background: #3b3b3b;
+  height: 600px;
+  z-index: 4;
+  border-radius: 5px;
+  overflow-y: auto;
+  color: var(--gray);
+  padding: 0.8rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.534);
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-header h1 {
+  text-transform: uppercase;
+  color: #f8b729;
+}
+
+.modal-header span {
+  font-weight: bold;
 }
