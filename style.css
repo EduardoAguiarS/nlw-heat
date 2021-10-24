@@ -34,6 +34,7 @@ main {
   min-height: 812px;
   height: 100vh;
   color: var(--gray);
+  position: relative;
 }
 
 /* Container */
@@ -155,10 +156,14 @@ ul {
   top: 0;
   left: 0;
 
+  display: none;
+  z-index: 3;
+}
+
+.modal.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
 }
 
 .modal-wrapper {
@@ -171,6 +176,12 @@ ul {
   color: var(--gray);
   padding: 3rem 2rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.534);
+  transform: translateX(-100rem);
+  transition: 0.5s ease;
+}
+
+.modal.active .modal-wrapper {
+  transform: translateX(0);
 }
 
 .modal-header {
@@ -250,4 +261,13 @@ ul {
   .modal form span {
     font-size: 0.9rem;
   }
+}
+
+.openmodal {
+  background: linear-gradient(184.3deg, #ff008e 0.48%, #ffcd1e 100%);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1.8rem;
 }
