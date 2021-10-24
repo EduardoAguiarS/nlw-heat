@@ -156,14 +156,19 @@ ul {
   top: 0;
   left: 0;
 
-  display: none;
-  z-index: 3;
-}
-
-.modal.active {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 3;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-wrapper {
@@ -176,6 +181,12 @@ ul {
   color: var(--gray);
   padding: 3rem 2rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.534);
+  transform: translateX(-100rem);
+  transition: 0.5s ease;
+}
+
+.modal.active .modal-wrapper {
+  transform: translateX(0);
 }
 
 .modal-header {
